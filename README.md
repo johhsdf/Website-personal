@@ -1,78 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toko Safiyya Naila</title>
-  <style>
-    :root {
-      --primary: #BEE3F8;
-      --accent: #FFD8A8;
-      --light-bg: #F9FAFB;
-      --dark-bg: #1F2937;
-      --dark-text: #F3F4F6;
-      --light-text: #111827;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--light-text);
-      transition: background 0.3s, color 0.3s;
-    }
-    body.dark {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--primary);
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .logo::before {
-      content: '🍚🥚';
-    }
-    .controls button {
-      margin-left: 10px;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: var(--accent);
-      transition: transform 0.3s;
-    }
-    .controls button:hover {
-      transform: scale(1.05);
-    }
-    section {
-      padding: 3rem 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    .product {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safiyya Naila - Toko Beras & Telur</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --bg-color: #FFFFFF;
+            --text-color: #333333;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4CAF50;
+            --bg-color: #121212;
+            --text-color: #E0E0E0;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="themeToggle">🌙 Dark Mode</button>
+        <button id="languageToggle">🇮🇩 ID</button>
+    </header>
+    
+    <script>
+        // Implementasi dark mode dan multi-bahasa
+        const translations = {
+            "welcome": {
+                "id": "Selamat Datang di Safiyya Naila",
+                "en": "Welcome to Safiyya Naila"
+            }
+        };
+    </script>
+</body>
+</html>      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 1rem;
       text-align: center;
       transition: transform 0.3s;
